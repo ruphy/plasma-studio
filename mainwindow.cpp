@@ -9,6 +9,7 @@
 
 #include <QDockWidget>
 
+#include <KListWidget>
 #include <KAction>
 #include <KConfig>
 #include <KConfigGroup>
@@ -52,10 +53,11 @@ void MainWindow::createMenus()
 void MainWindow::createDockWidgets()
 {
     QDockWidget *workflow = new QDockWidget(i18n("Workflow"), this);
-//     workflow->setAllowedAreas(Qt::AllDockWidgetAreas);
-//     Qt::LeftDockWidgetArea |
-//                               Qt::RightDockWidgetArea);
-    workflow->setWidget(new QWidget(workflow));
+    
+    KListWidget *list = new KListWidget(workflow);
+    list->addItem("test");
+    
+    workflow->setWidget(list);
     addDockWidget(Qt::LeftDockWidgetArea, workflow);
 }
 
