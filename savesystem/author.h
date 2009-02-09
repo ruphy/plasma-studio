@@ -7,15 +7,18 @@
   (at your option) any later version.
 */
  
-#ifndef SAVESYSTEM_H
-#define SAVESYSTEM_H
+#ifndef AUTHOR_H
+#define AUTHOR_H
  
-#include <QWidget>
- 
-class SaveSystem : public QWidget
+// #include <QWidget>
+
+class QString;
+
+class Author
 {
     public:
-        SaveSystem(QWidget *parent = 0);
+        Author();
+        
 };
  
-#endif // TEXTEDITOR_H
+#endif // AUTHOR_H
