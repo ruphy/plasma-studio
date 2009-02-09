@@ -2,6 +2,7 @@
 #define METADATAEDITOR_H
 
 #include <QWidget>
+#include <QStringList>
 
 namespace Ui {
     class MetaDataEditor;
@@ -32,6 +33,8 @@ private:
     Ui::MetaDataEditor *view;
     QString filename;
     Plasma::PackageMetadata *metadata;
+    QStringList apis;
+    QStringList categories;
 };
 
 #endif // METADATAEDITOR__H
